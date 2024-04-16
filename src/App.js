@@ -62,7 +62,7 @@ function SignIn() {
       <FontAwesomeIcon icon={faGoogle} size='lg' style={{color: "#000", marginRight: "20px",}} />
         Sign in with Google
       </button>
-      <p class="wr">Do not violate the community guidelines or you will be banned for life!</p>
+      <p class="warning-msg">Do not violate the community guidelines or you will be banned for life!</p>
     </>
   )
 
