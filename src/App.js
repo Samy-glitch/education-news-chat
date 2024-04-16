@@ -1,16 +1,26 @@
 import React, { useRef, useState } from 'react';
 import './App.css';
 
-import firebase from 'firebase/app';
-import 'firebase/firestore';
-import 'firebase/auth';
-import 'firebase/analytics';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+import 'firebase/compat/analytics';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGoogle } from '@fortawesome/free-brands-svg-icons'
+import { fas, faPaperPlane, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
-  // your config
+  apiKey: "AIzaSyAJsXu-O_bCElmM2TcPYhsDkO_C1tPeX-k",
+  authDomain: "technical-education-news-chat.firebaseapp.com",
+  projectId: "technical-education-news-chat",
+  storageBucket: "technical-education-news-chat.appspot.com",
+  messagingSenderId: "816297685581",
+  appId: "1:816297685581:web:948a4bdc9c078e5bbae204",
+  measurementId: "G-S0882FNBDC"
 })
 
 const auth = firebase.auth();
@@ -25,7 +35,9 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>⚛️🔥💬</h1>
+        <h1>
+          <a href='https://tsc-education-news.netlify.app/more/'><FontAwesomeIcon icon={faArrowLeft} style={{color: "#fff", marginLeft: "20px",}}  /></a>
+        </h1>
         <SignOut />
       </header>
 
@@ -46,8 +58,11 @@ function SignIn() {
 
   return (
     <>
-      <button className="sign-in" onClick={signInWithGoogle}>Sign in with Google</button>
-      <p>Do not violate the community guidelines or you will be banned for life!</p>
+      <button className="sign-in" onClick={signInWithGoogle}>
+      <FontAwesomeIcon icon={faGoogle} size='lg' style={{color: "#000", marginRight: "20px",}} />
+        Sign in with Google
+      </button>
+      <p class="wr">Do not violate the community guidelines or you will be banned for life!</p>
     </>
   )
 
@@ -97,9 +112,11 @@ function ChatRoom() {
 
     <form onSubmit={sendMessage}>
 
-      <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
+      <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Type a message" />
 
-      <button type="submit" disabled={!formValue}>🕊️</button>
+      <button type="submit" disabled={!formValue}>
+        <FontAwesomeIcon icon={faPaperPlane} size='lg' style={{color: "#000",}} />
+      </button>
 
     </form>
   </>)

@@ -1,5 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+  --main-background-color: rgb(41, 51, 54);
+  --text-color: rgb(231, 231, 231);
+  --hover-color: rgb(24, 24, 24);
+  --background-body: rgb(10, 10, 10);
+  --background-color: rgb(0, 0, 0);
+  --background-color-2: rgb(22, 24, 28);
+  --header-background-color: none;
+  --secleted-background-color: rgb(14, 14, 14);
+
+  -webkit-tap-highlight-color: transparent
+}
+
 body {
-  background-color: #282c34;
+  font-family: "Nunito", sans-serif;
+  background-color: var(--main-background-color);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+
 }
 
 .App {
@@ -30,7 +51,7 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(40, 37, 53);
+  background-color: var(--background-body);
 }
 
 main {
@@ -55,10 +76,10 @@ main::-webkit-scrollbar-thumb {
 }
 
 form {
-  height: 10vh;
+  height: 11vh;
   position: fixed;
   bottom: 0;
-  background-color: rgb(24, 23, 23);
+  background-color: var(--background-color);
   width: 100%;
   max-width: 728px;
   display: flex;
@@ -66,26 +87,36 @@ form {
 }
 
 form button {
+  padding: 11px 32px 15px 32px;
   width: 20%;
-  background-color: rgb(56, 56, 143);
+  background-color: var(--text-color);
 }
 
 
 input {
+  margin: 10px;
   line-height: 1.5;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 12px;
   background: rgb(58, 58, 58);
   color: white;
   outline: none;
   border: none;
-  padding: 0 10px;
+  padding: 0 15px;
+}
+
+header button {
+  font-weight: bold;
+  padding: 10px 20px;
 }
 
 button {
-  background-color: #282c34; /* Green */
+  margin: 10px;
+  background-color: var(--text-color);
   border: none;
-  color: white;
+  border-radius: 12px;
+  color: #000;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -95,35 +126,50 @@ button {
 }
 
 button:disabled {
-  opacity: 0.5;
+  opacity: 0.8;
   cursor: not-allowed;
 }
 
 
 .sign-in {
-  color: #282c34;
-  background: white;
+  color: #000000;
+  font-weight: bold;
+  background: var(--text-color);
   max-width: 400px;
   margin: 0 auto;
+  border-radius: 12px;
+  transition: 0.5s;
+  border-bottom: 5px solid rgb(185, 185, 185);
+  border-right: 6px solid rgb(185, 185, 185);
+}
+
+.sign-in:hover {
+  background: rgb(185, 185, 185);
+  border-bottom: 5px solid rgb(161, 161, 161);
+  border-right: 6px solid rgb(161, 161, 161);
 }
 
 
 
 
-ul, li {
+ul,
+li {
   text-align: left;
   list-style: none;
 }
 
 p {
-  max-width: 500px;
-  margin-bottom: 12px;
+  font-weight: 500;
+  max-width: 550px;
   line-height: 24px;
   padding: 10px 20px;
-  border-radius: 25px;
+/*   border-radius: 25px; */
   position: relative;
-  color: white;
-  text-align: center;
+  color: var(--text-color);
+}
+
+.wr {
+  margin: 12px auto;
 }
 
 .message {
@@ -140,10 +186,13 @@ p {
   color: white;
   background: #0b93f6;
   align-self: flex-end;
+  border-radius: 80px 80px 15px 80px;
 }
+
 .received p {
   background: #e5e5ea;
   color: black;
+  border-radius: 80px 80px 80px 15px;
 }
 
 img {
@@ -153,3 +202,11 @@ img {
   margin: 2px 5px;
 }
 
+@media only screen and (max-width: 560px) {
+  form {
+    height: 8vh;
+  }
+  .app header {
+    height: 60px;
+  }
+}
