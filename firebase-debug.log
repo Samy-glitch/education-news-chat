@@ -1,13 +1,13 @@
-[debug] [2024-04-16T13:04:14.215Z] ----------------------------------------------------------------------
-[debug] [2024-04-16T13:04:14.218Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2024-04-16T13:04:14.219Z] CLI Version:   13.7.2
-[debug] [2024-04-16T13:04:14.219Z] Platform:      win32
-[debug] [2024-04-16T13:04:14.219Z] Node Version:  v20.3.0
-[debug] [2024-04-16T13:04:14.219Z] Time:          Tue Apr 16 2024 19:04:14 GMT+0600 (Bangladesh Standard Time)
-[debug] [2024-04-16T13:04:14.219Z] ----------------------------------------------------------------------
+[debug] [2024-04-16T13:14:09.081Z] ----------------------------------------------------------------------
+[debug] [2024-04-16T13:14:09.083Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-04-16T13:14:09.084Z] CLI Version:   13.7.2
+[debug] [2024-04-16T13:14:09.084Z] Platform:      win32
+[debug] [2024-04-16T13:14:09.084Z] Node Version:  v20.3.0
+[debug] [2024-04-16T13:14:09.084Z] Time:          Tue Apr 16 2024 19:14:09 GMT+0600 (Bangladesh Standard Time)
+[debug] [2024-04-16T13:14:09.084Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-04-16T13:04:14.288Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-04-16T13:04:14.288Z] > authorizing via signed-in user (sadmansamy22@gmail.com)
+[debug] [2024-04-16T13:14:09.169Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-16T13:14:09.170Z] > authorizing via signed-in user (sadmansamy22@gmail.com)
 [info] 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -30,12 +30,55 @@ Before we get started, keep in mind:
 [info] You can create multiple project aliases by running firebase use --add, 
 [info] but for now we'll just set up a default project.
 [info] 
-[debug] [2024-04-16T13:04:20.245Z] Using project from CLI flag: fireship-demos
-[debug] [2024-04-16T13:04:20.247Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos [none]
-[debug] [2024-04-16T13:04:21.009Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos 403
-[debug] [2024-04-16T13:04:21.009Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
-[debug] [2024-04-16T13:04:21.009Z] HTTP Error: 403, The caller does not have permission
-[debug] [2024-04-16T13:04:21.396Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+[debug] [2024-04-16T13:14:15.499Z] Using project from CLI flag: fireship-demos
+[debug] [2024-04-16T13:14:15.501Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos [none]
+[debug] [2024-04-16T13:14:16.071Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos 403
+[debug] [2024-04-16T13:14:16.071Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-04-16T13:14:16.071Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-04-16T13:14:16.236Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (C:\Users\Computer Importer\AppData\Roaming\nvm\v20.3.0\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\Computer Importer\AppData\Roaming\nvm\v20.3.0\node_modules\firebase-tools\lib\apiv2.js:299:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project fireship-demos. Please make sure the project exists and your account has permission to access it.
+[debug] [2024-04-16T13:17:46.718Z] ----------------------------------------------------------------------
+[debug] [2024-04-16T13:17:46.724Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-04-16T13:17:46.724Z] CLI Version:   13.7.2
+[debug] [2024-04-16T13:17:46.725Z] Platform:      win32
+[debug] [2024-04-16T13:17:46.725Z] Node Version:  v20.3.0
+[debug] [2024-04-16T13:17:46.725Z] Time:          Tue Apr 16 2024 19:17:46 GMT+0600 (Bangladesh Standard Time)
+[debug] [2024-04-16T13:17:46.725Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-16T13:17:46.795Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-16T13:17:46.796Z] > authorizing via signed-in user (sadmansamy22@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Documents\GitHub\react-firebase-chat
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-04-16T13:17:51.337Z] Using project from CLI flag: fireship-demos
+[debug] [2024-04-16T13:17:51.339Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos [none]
+[debug] [2024-04-16T13:17:52.108Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos 403
+[debug] [2024-04-16T13:17:52.108Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/fireship-demos {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2024-04-16T13:17:52.109Z] HTTP Error: 403, The caller does not have permission
+[debug] [2024-04-16T13:17:52.498Z] FirebaseError: HTTP Error: 403, The caller does not have permission
     at responseToError (C:\Users\Computer Importer\AppData\Roaming\nvm\v20.3.0\node_modules\firebase-tools\lib\responseToError.js:49:12)
     at RetryOperation._fn (C:\Users\Computer Importer\AppData\Roaming\nvm\v20.3.0\node_modules\firebase-tools\lib\apiv2.js:299:77)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
