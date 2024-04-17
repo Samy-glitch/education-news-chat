@@ -16,6 +16,7 @@
 body {
   height: 100%;
   font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
   background-color: var(--main-background-color);
 }
 
@@ -31,7 +32,7 @@ body::-webkit-scrollbar {
 }
 
 .App header {
-  background-color: #181717;
+  background-color: var(--background-color);
   height: 10vh;
   min-height: 50px;
   color: white;
@@ -46,6 +47,7 @@ body::-webkit-scrollbar {
   z-index: 99;
   padding: 10px;
   box-sizing: border-box;
+  border-bottom: 1px solid var(--main-background-color);
 }
 
 .App section {
@@ -161,6 +163,7 @@ li {
 }
 
 p {
+  font-size: medium;
   font-weight: 500;
   max-width: 550px;
   line-height: 24px;
@@ -175,6 +178,7 @@ p {
 }
 
 .message {
+  margin-top: 10px;
   display: flex;
   align-items: center;
 }
@@ -184,14 +188,20 @@ p {
   flex-direction: row-reverse;
 }
 
-.sent p {
+.sent .msg-i p {
+  margin-right: 60px;
   color: white;
   background: #0b93f6;
   align-self: flex-end;
   border-radius: 80px 80px 15px 80px;
 }
 
-.received p {
+.sent .msg-i img {
+  position: absolute;
+  right: 15px;
+}
+
+.received .msg-i p {
   background: #e5e5ea;
   color: black;
   border-radius: 80px 80px 80px 15px;
@@ -204,6 +214,31 @@ img {
   margin: 2px 5px;
 }
 
+.msg-p {
+  display: flex;
+  flex-direction: column;
+}
+
+.msg-p p {
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  font-size: small;
+  background-color: transparent;
+
+}
+
+.msg-i {
+  display: flex;
+}
+
+.msg-i p {
+  margin: 0 0 10px 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
 @media only screen and (max-width: 560px) {
   form {
     height: 8vh;
@@ -211,4 +246,12 @@ img {
   .app header {
     height: 60px;
   }
+}
+
+@media only screen and (max-width:950px) {
+
+  .App header {
+    display: flex;
+  }
+  
 }
