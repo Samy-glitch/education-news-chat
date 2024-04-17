@@ -32,7 +32,7 @@ body::-webkit-scrollbar {
 }
 
 .App header {
-  background-color: var(--background-color);
+  background-color: #0000008c;
   height: 10vh;
   min-height: 50px;
   color: white;
@@ -47,6 +47,8 @@ body::-webkit-scrollbar {
   padding: 10px;
   box-sizing: border-box;
   border-bottom: 1px solid var(--main-background-color);
+  box-shadow: 0 8px 15px #00000094;
+  backdrop-filter: blur(10px);
 }
 
 .App section {
@@ -64,8 +66,8 @@ body::-webkit-scrollbar {
 
 main {
   padding: 10px;
-  height: 80vh;
-  margin: 10vh 0 10vh;
+  height: 87.5vh;
+  margin: 0 0 10vh 0;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -250,6 +252,15 @@ img {
   font-size: 15px;
 }
 
+.arrow-back {
+  display: none;
+}
+
+.h1-chat {
+  padding-left: 20px;
+  display: block;
+}
+
 @media only screen and (max-width: 560px) {
   form {
     height: 8vh;
@@ -259,10 +270,13 @@ img {
   }
 }
 
-/* @media only screen and (max-width:950px) {
+@media only screen and (max-width:950px) {
 
-  .App header {
-    display: flex;
+  .arrow-back{
+    display: block;
+  }
+  .h1-chat {
+    display: none;
   }
   
-} */
+}

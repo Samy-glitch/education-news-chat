@@ -35,9 +35,10 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>
+        <h1 class="arrow-back">
           <a href='https://tsc-education-news.netlify.app/more/'><FontAwesomeIcon icon={faArrowLeft} style={{color: "#fff", marginLeft: "20px",}}  /></a>
         </h1>
+        <h1 class="h1-chat">Chat</h1>
         <SignOut />
       </header>
 
