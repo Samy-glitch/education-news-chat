@@ -268,15 +268,10 @@ img {
   .app header {
     height: 60px;
   }
-}
-
-@media only screen and (max-width:950px) {
-
   .arrow-back{
     display: block;
   }
   .h1-chat {
     display: none;
   }
-  
 }
