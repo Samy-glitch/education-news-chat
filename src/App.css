@@ -16,7 +16,7 @@
 body {
   height: 100%;
   font-family: "Nunito", sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: var(--main-background-color);
 }
 
@@ -40,8 +40,7 @@ body::-webkit-scrollbar {
   width: 100%;
   max-width: 728px;
   top: 0;
-  display: none;
-/*   display: flex; */
+  display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 99;
@@ -58,6 +57,11 @@ body::-webkit-scrollbar {
   background-color: var(--background-body);
 }
 
+.app header button {
+  border-bottom: 5px solid rgb(185, 185, 185);
+  border-right: 6px solid rgb(185, 185, 185);
+}
+
 main {
   padding: 10px;
   height: 80vh;
@@ -72,11 +76,11 @@ main::-webkit-scrollbar {
 }
 
 main::-webkit-scrollbar-track {
-  background: #1e1e24;
+  background: #000000;
 }
 
 main::-webkit-scrollbar-thumb {
-  background: #6649b8;
+  background: var(--text-color);
 }
 
 form {
@@ -88,12 +92,15 @@ form {
   max-width: 728px;
   display: flex;
   font-size: 1.5rem;
+  border-top: 1px solid var(--main-background-color);
 }
 
 form button {
   padding: 11px 32px 15px 32px;
   width: 20%;
   background-color: var(--text-color);
+  border-bottom: 5px solid rgb(185, 185, 185);
+  border-right: 6px solid rgb(185, 185, 185);
 }
 
 
@@ -153,7 +160,11 @@ button:disabled {
   border-right: 6px solid rgb(161, 161, 161);
 }
 
-
+.sign-out {
+  background-color: var(--text-color);
+  border-bottom: 5px solid rgb(185, 185, 185);
+  border-right: 6px solid rgb(185, 185, 185);
+}
 
 
 ul,
@@ -189,22 +200,23 @@ p {
 }
 
 .sent .msg-i p {
-  margin-right: 60px;
+  margin: 0 5px 10px 0;
   color: white;
   background: #0b93f6;
   align-self: flex-end;
   border-radius: 80px 80px 15px 80px;
 }
 
-.sent .msg-i img {
-  position: absolute;
-  right: 15px;
-}
-
 .received .msg-i p {
+  margin: 0 0 10px 5px;
   background: #e5e5ea;
   color: black;
   border-radius: 80px 80px 80px 15px;
+}
+
+.sent .msg-i {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 img {
@@ -220,11 +232,11 @@ img {
 }
 
 .msg-p p {
-  color: var(--text-color);
+  color: gray;
   margin: 0;
   padding: 0;
   margin-bottom: 5px;
-  font-size: small;
+  font-size: 9px;
   background-color: transparent;
 
 }
@@ -234,9 +246,8 @@ img {
 }
 
 .msg-i p {
-  margin: 0 0 10px 5px;
-  padding: 10px 20px;
-  font-size: 18px;
+  padding: 8px 16px;
+  font-size: 15px;
 }
 
 @media only screen and (max-width: 560px) {
@@ -248,10 +259,10 @@ img {
   }
 }
 
-@media only screen and (max-width:950px) {
+/* @media only screen and (max-width:950px) {
 
   .App header {
     display: flex;
   }
   
-}
+} */
