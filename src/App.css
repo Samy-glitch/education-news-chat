@@ -67,7 +67,7 @@ body::-webkit-scrollbar {
 main {
   padding: 10px;
   height: 87.5vh;
-  margin: 0 0 10vh 0;
+  margin: 10vh 0;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -216,9 +216,17 @@ p {
   border-radius: 80px 80px 80px 15px;
 }
 
+.received .msg-p p {
+  text-align: start;
+}
+
 .sent .msg-i {
   display: flex;
   flex-direction: row-reverse;
+}
+
+.sent .msg-p p {
+  text-align: end;
 }
 
 img {
@@ -237,9 +245,9 @@ img {
   color: gray;
   margin: 0;
   padding: 0;
-  margin-bottom: 5px;
   font-size: 9px;
   background-color: transparent;
+  text-align: start;
 
 }
 
