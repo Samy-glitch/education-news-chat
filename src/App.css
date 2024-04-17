@@ -66,8 +66,8 @@ body::-webkit-scrollbar {
 
 main {
   padding: 10px;
-  height: 87.5vh;
-  margin: 10vh 0;
+  height: 80vh;
+  margin: 10vh 0 10vh;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -85,8 +85,12 @@ main::-webkit-scrollbar-thumb {
   background: var(--text-color);
 }
 
+.span-div {
+  height: 20px;
+}
+
 form {
-  height: 11vh;
+  height: 10vh;
   position: fixed;
   bottom: 0;
   background-color: var(--background-color);
