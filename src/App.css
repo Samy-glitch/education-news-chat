@@ -9,6 +9,8 @@
   --background-color-2: rgb(22, 24, 28);
   --header-background-color: none;
   --secleted-background-color: rgb(14, 14, 14);
+  --light-blue: rgb(8, 160, 233);
+  --light-blue-shadow: rgb(0, 132, 180);
 
   -webkit-tap-highlight-color: transparent
 }
@@ -102,11 +104,14 @@ form {
 }
 
 form button {
-  padding: 11px 32px 15px 32px;
+  font-size: 25px;
+  color: var(--text-color);
+  padding: 11px 32px;
   width: 20%;
-  background-color: var(--text-color);
-  border-bottom: 5px solid rgb(185, 185, 185);
-  border-right: 6px solid rgb(185, 185, 185);
+  background-color: var(--light-blue);
+  border-bottom: 5px solid var(--light-blue-shadow);
+  border-right: 6px solid var(--light-blue-shadow);
+  transition: 0.25s;
 }
 
 
@@ -130,7 +135,7 @@ header button {
 
 button {
   margin: 10px;
-  background-color: var(--text-color);
+  background-color: var(--light-blue);
   border: none;
   border-radius: 12px;
   color: #000;
@@ -143,7 +148,10 @@ button {
 }
 
 button:disabled {
-  opacity: 0.8;
+  color: #000;
+  background-color: var(--text-color);
+  border-bottom: 5px solid rgb(185, 185, 185);
+  border-right: 6px solid rgb(185, 185, 185);
   cursor: not-allowed;
 }
 
@@ -161,9 +169,10 @@ button:disabled {
 }
 
 .sign-in:hover {
-  background: rgb(185, 185, 185);
-  border-bottom: 5px solid rgb(161, 161, 161);
-  border-right: 6px solid rgb(161, 161, 161);
+  color: var(--text-color);
+  background-color: var(--light-blue);
+  border-bottom: 5px solid var(--light-blue-shadow);
+  border-right: 6px solid var(--light-blue-shadow);
 }
 
 .sign-out {
@@ -286,4 +295,9 @@ img {
   .h1-chat {
     display: none;
   }
+  form button {
+    font-size: 20px;
+    padding: 11px;
+  }
+  
 }

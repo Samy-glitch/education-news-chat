@@ -13,6 +13,10 @@ import { fas, faPaperPlane, faArrowLeft, faRightFromBracket } from '@fortawesome
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
+import useSound from 'use-sound';
+
+import popSound from './sounds/pop-39222.mp3';
+
 firebase.initializeApp({
   apiKey: "AIzaSyAJsXu-O_bCElmM2TcPYhsDkO_C1tPeX-k",
   authDomain: "technical-education-news-chat.firebaseapp.com",
@@ -36,7 +40,7 @@ function App() {
     <div className="App">
       <header>
         <h1 class="arrow-back">
-          <a href='https://tsc-education-news.netlify.app/more/'><FontAwesomeIcon icon={faArrowLeft} style={{color: "#fff", marginLeft: "20px",}}  /></a>
+          <a href='https://tsc-education-news.netlify.app/more/'><FontAwesomeIcon icon={faArrowLeft} style={{ color: "#fff", marginLeft: "20px", }} /></a>
         </h1>
         <h1 class="h1-chat">Chat</h1>
         <SignOut />
@@ -60,7 +64,7 @@ function SignIn() {
   return (
     <>
       <button className="sign-in" onClick={signInWithGoogle}>
-      <FontAwesomeIcon icon={faGoogle} size='lg' style={{color: "#000", marginRight: "20px",}} />
+        <FontAwesomeIcon icon={faGoogle} size='lg' style={{ marginRight: "20px", }} />
         Sign in with Google
       </button>
       <p class="warning-msg">Do not violate the community guidelines or you will be banned for life!</p>
@@ -71,12 +75,13 @@ function SignIn() {
 
 function SignOut() {
   return auth.currentUser && (
-    <button className="sign-out" onClick={() => auth.signOut()}><FontAwesomeIcon icon={faRightFromBracket} style={{marginRight: "5px",}} />Sign Out</button>
+    <button className="sign-out" onClick={() => auth.signOut()}><FontAwesomeIcon icon={faRightFromBracket} style={{ marginRight: "5px", }} />Sign Out</button>
   )
 }
 
 
 function ChatRoom() {
+  const [playSound] = useSound(popSound);
   const dummy = useRef();
   const messagesRef = firestore.collection('messages');
   const query = messagesRef.orderBy('createdAt').limit(40);
@@ -116,8 +121,8 @@ function ChatRoom() {
 
       <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Type a message" />
 
-      <button type="submit" disabled={!formValue}>
-        <FontAwesomeIcon icon={faPaperPlane} size='lg' style={{color: "#000",}} />
+      <button type="submit" disabled={!formValue} onClick={playSound}>
+        <FontAwesomeIcon icon={faPaperPlane} />
       </button>
 
     </form>
@@ -132,7 +137,7 @@ function ChatMessage(props) {
 
   return (<>
     <div className={`message ${messageClass}`}>
-      <dev class= "msg-p">
+      <dev class="msg-p">
         <p>{displayName}</p>
         <dev class="msg-i">
           <img src={photoURL || 'https://api.adorable.io/avatars/23/abott@adorable.png'} />
